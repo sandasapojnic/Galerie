@@ -1,15 +1,18 @@
 @import url(https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap);
+
 .dogs {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
 }
 
+/* Imaginile */
 .dogs img {
   width: 100%;
-  height: 370px; 
-  object-fit:cover;
+  height: 370px;
+  object-fit: cover;
 }
+
 .dogs div {
   position: relative;
   background: rgba(0, 0, 0, 0.5);
@@ -35,6 +38,19 @@
 
 .dogs div:hover .img__description {
   opacity: 1;
+}
+
+/* Media Queries pentru ecrane mai mari */
+@media (min-width: 600px) {
+  .dogs {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media (min-width: 900px) {
+  .dogs {
+    grid-template-columns: repeat(4, 1fr); 
+  }
 }
 
 
